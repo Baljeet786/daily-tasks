@@ -1,0 +1,127 @@
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    
+<div class="container">
+
+
+<!------------navbar start------------->
+<header>
+
+    <a href="contact.html" class="logo">Smart<span>Study</span></a>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}">home</a>
+       
+        
+        
+        <a href="{% url 'signup' %}">log-in</a>
+    </nav>
+
+</header>
+
+
+<!------------navbar end------------->
+
+
+
+
+
+
+
+<!-- home section  -->
+
+<section class="home">
+
+    <div class="content">
+        <h3>E-learning is a better way of learning</h3>
+          <p> An education website is a place that will be visited by very different types of people. These will be current and future students, professors, parents, those looking for a job, and even sponsors. </p>
+      
+        <a href="#" class="btn">get started</a>
+    </div>
+
+    <div class="image">
+        <img src="{% static 'images/home-img.svg' %}" alt="">
+  
+
+</section>
+
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p> An education website is a place that will be visited by very different types of people. These will be current and future students, professors, parents, those looking for a job, and even sponsors. </p>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">course</a>
+            <a href="#">teacher</a>
+            <a href="#">price</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+        <div class="box">
+            <h3>contact us</h3>
+           <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+           <p> <i class="fas fa-envelope"></i> studysmart@gmail.com </p>
+           <p> <i class="fas fa-map-marker-alt"></i> Punjab,India -140119 </p>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> Mr.Baljeet Singh </span> | all rights reserved </div>
+
+</section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

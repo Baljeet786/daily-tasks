@@ -1,0 +1,129 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    
+<div class="container">
+
+<header>
+
+    <a href="#" class="logo">Hyper<span>Tech</span></a>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}">home</a>
+        
+     
+       
+        <a href="{% url 'signup' %}">log-in</a>
+    </nav>
+
+</header>
+
+<h1 class="heading">contact us</h1>
+
+<!-- contact section  -->
+
+<section class="contact">
+
+<div class="image">
+    <img src="{% static 'images/contact-img.svg' %}">
+</div>
+
+<form action="" enctype ="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <div class="inputBox">
+        <input type="text" placeholder="USERNAME" name="username">
+        <input type="email" placeholder="email" name='email'>
+        <input type="password" placeholder="password" name="password">
+
+
+        <p>upload image</p>
+        <input type="file" name="image" accept="image/png,image/jpg,image/jpeg" placeholder="Upload from device"><br>
+        
+    </div>
+
+    <input type="text" placeholder="subject" name="subject" class="box">
+
+    <textarea placeholder="message" name="message" id="" cols="30" rows="10"></textarea>
+
+    <input type="submit" class="btn" value="send">
+
+</form>
+
+</section>
+
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+
+   
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">course</a>
+            <a href="#">teacher</a>
+            <a href="#">price</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+        <div class="box">
+            <h3>contact us</h3>
+           <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+           <p> <i class="fas fa-envelope"></i> studysmart@gmail.com </p>
+           <p> <i class="fas fa-map-marker-alt"></i> Punjab,India -140119  </p>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span>Mr.Baljeet Singh </span> | all rights reserved </div>
+
+</section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
